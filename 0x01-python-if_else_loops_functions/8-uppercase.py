@@ -8,6 +8,6 @@ def uppercase(str):
                 y = x - 32
                 result = result + "{:c}".format(y)
             else:
-                result = result + ":c".format(x)
+                result = result + "{:c}".format(x)
     print(result)
 
