@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 for i in range(97, 123):
-    print(f"{i:c}", end = '')
+    print("{:c}".format(i), end = '')
 
