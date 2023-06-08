@@ -9,3 +9,5 @@ if __name__ == "__main__":
             x = int(argv[i])
             total += x
         print(total)
+    else:
+        print(0)
