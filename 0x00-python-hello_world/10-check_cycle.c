@@ -8,7 +8,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t slow_temp, fast_temp;
+	listint_t *slow_temp, *fast_temp;
 
 	slow_temp = list;
 	fast_temp = list;
@@ -22,7 +22,7 @@ int check_cycle(listint_t *list)
 		fast_temp = fast_temp->next->next;
 
 		if (fast_temp == slow_temp)
-			return 1
+			return (1);
 	}
 	return (0);
 }
