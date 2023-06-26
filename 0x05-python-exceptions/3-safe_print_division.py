@@ -4,8 +4,8 @@ def safe_print_division(a, b):
     try:
         value = a / b
     except ZeroDivisionError:
-        return None
+        value = "None"
     finally:
-        print("Inside Result: {}".format(value))
+        print("Inside result: {}".format(value))
 
     return value
