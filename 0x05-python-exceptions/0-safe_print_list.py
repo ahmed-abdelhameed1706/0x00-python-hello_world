@@ -7,6 +7,7 @@ def safe_print_list(my_list=[], x=0):
             print (my_list[i], end="")
         except IndexError:
             print("\n")
+            return total_len
         else:
             total_len += 1
 
