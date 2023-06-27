@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """defines a square?"""
+
+
 class Square:
     """
     this is a docstring of the square class
