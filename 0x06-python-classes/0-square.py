@@ -6,4 +6,5 @@ class Square(Object):
     that doesnt do anything
     this is here to verify I made a class I guess
     """
-    pass
+    def __init__(self):
+        pass
