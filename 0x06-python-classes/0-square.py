@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
-class Square(Object):
+"""defines a square?"""
+class Square:
     """
     this is a docstring of the square class
     that doesnt do anything
