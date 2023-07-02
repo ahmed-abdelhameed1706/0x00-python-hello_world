@@ -1,0 +1,61 @@
+#3-say_my_name.txt
+
+===========================
+how to use 3-say_my_name.py
+===========================
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Ahmed", "Abd El Hameed")
+	My name is Ahmed Abd El Hameed
+
+::
+
+	>>> say_my_name("Khalid")
+	My name is Khalid
+
+::
+
+	>>> say_my_name("", "Khalid")
+	My name is Khalid
+
+Invalid Names
+=============
+
+::
+
+	>>> say_my_name(21, "Khalid")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name("Ahmed", 12)
+	Traceback (most recent call last):
+        TypeError: last_name must be a string
+
+::
+
+	>>> say_my_name(None, "Khalid")
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name(["Ahmed", "Ali"], "Khalid")
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name("")
+        Traceback (most recent call last):
+        ValueError: You have to enter atleast one name
+
+::
+
+	>>> say_my_name("Ahmed", None)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+

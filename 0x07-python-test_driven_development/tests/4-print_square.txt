@@ -1,0 +1,51 @@
+#4-print_square.txt
+===================
+
+how to use 4-print_square.py
+============================
+
+::
+
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+::
+
+	>>> print_square(0)
+
+Invalid Inputs
+==============
+
+::
+
+	>>> print_square("a")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+::
+
+	>>> print_square(-2.3)
+	Traceback (most recent call last):
+        TypeError: size must be an integer
+
+::
+
+	>>> print_square([2])
+	Traceback (most recent call last):
+        TypeError: size must be an integer
+
+::
+
+	>>> print_square(2.3)
+        Traceback (most recent call last):
+        TypeError: size must be an integer
