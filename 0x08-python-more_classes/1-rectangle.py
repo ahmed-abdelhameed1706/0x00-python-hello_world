@@ -49,3 +49,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def __repr__(self):
+        return f"{{'_Rectangle__height': {self._height}, '_Rectangle__width': {self._width}}}"
