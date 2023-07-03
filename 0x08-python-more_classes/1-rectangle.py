@@ -24,10 +24,10 @@ class Rectangle:
         """
         sets the width
         """
-        if type(value) is not int:
+        if type(value) not in [int, float]:
             raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError("widtha must be >= 0")
+            raise ValueError("width must be >= 0")
         else:
             self.__width = value
 
@@ -43,9 +43,9 @@ class Rectangle:
         """
         sets the height
         """
-        if type(value) is not int:
+        if type(value) not in [int, float]:
             raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("heigaht must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
