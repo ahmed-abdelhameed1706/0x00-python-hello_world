@@ -3,5 +3,6 @@
 a module that defines a Rectangle
 """
 
+
 class Rectangle:
     pass
