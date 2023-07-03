@@ -91,4 +91,3 @@ class Rectangle:
             return rect_1
         elif rect_1.area() < rect_2.area():
             return rect_2
-
