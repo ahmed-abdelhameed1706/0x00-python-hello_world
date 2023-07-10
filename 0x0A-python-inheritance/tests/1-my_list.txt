@@ -16,3 +16,6 @@ how to use test_print_sorted.txt
 	[1, 2, 3]
 
 ::
+
+	>>> print_sorted([-1, -2, -3])
+	[-3, -2, -1]
