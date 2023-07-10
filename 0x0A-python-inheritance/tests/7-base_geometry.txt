@@ -1,0 +1,20 @@
+#test_integer_validator.txt
+
+===============================
+how to use test_integer_validator.txt
+===============================
+
+::
+	>>> basegeo = __import__('7-base_geometry').BaseGeometry
+        >>> integer_validator = basegeo.integer_validator
+        >>> integer_validator(basegeo, "Ahmed", "test")
+        Traceback (most recent call last):
+	TypeError: Ahmed must be an integer
+
+::
+
+        >>> integer_validator(basegeo, "another name", -5)
+        Traceback (most recent call last):
+        ValueError: another name must be greater than 0
+
+::
