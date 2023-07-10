@@ -43,3 +43,6 @@ how to use test_print_sorted.txt
         TypeError: print_sorted() missing 1 required positional argument: 'self'
 
 ::
+
+	>>> print_sorted([5, -2 , 9, 0])
+        [-2, 0, 5, 9]
