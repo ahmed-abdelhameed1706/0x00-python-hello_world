@@ -6,7 +6,7 @@ a student class
 
 class Student:
     """
-    a class that reprents a student 
+    a class that reprents a student
     """
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
