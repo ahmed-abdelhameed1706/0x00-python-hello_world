@@ -4,7 +4,7 @@ function to append to file
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     function to append to file
     """
