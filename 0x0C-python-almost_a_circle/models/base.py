@@ -15,7 +15,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -36,7 +36,8 @@ class Base:
         a method to save json string to file
         """
         file_name = cls.__name__ + ".json"
-        obj_dict = [i.to_dictionary() for i in list_objs if list_objs is not None]
+        obj_dict = [i.to_dictionary() for i in list_objs if
+                    list_objs is not None]
 
         with open(file_name, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(obj_dict))
@@ -70,7 +71,7 @@ class Base:
         a method to load json from file
         """
         file_name = cls.__name__ + ".json"
-        
+
         if not os.path.exists(file_name):
             return []
         else:
@@ -78,6 +79,7 @@ class Base:
                 json_str = f.read()
 
             json_obj = cls.from_json_string(json_str)
-            obj_list = [cls.create(**json_obj[i]) for i in range(len(json_obj))]
+            obj_list = [cls.create(**json_obj[i])
+                        for i in range(len(json_obj))]
 
         return obj_list
