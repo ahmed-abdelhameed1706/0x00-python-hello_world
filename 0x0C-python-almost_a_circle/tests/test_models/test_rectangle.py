@@ -24,6 +24,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(test.x, 0)
         self.assertEqual(test.y, 0)
 
+        with self.assertRaises(AttributeError):
+            test = Rectangle()
+
     def test_validation(self):
         """
         test validation of rectangle attributes
