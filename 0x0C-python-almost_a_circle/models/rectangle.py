@@ -20,7 +20,7 @@ class Rectangle(Base):
         self.y = y
 
         super().__init__(id)
-    
+
     @property
     def width(self):
         """
@@ -113,8 +113,9 @@ class Rectangle(Base):
         """
         returns a string that presents the rectangle
         """
-        return
-        (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+                .format(self.id, self.__x, self.__y,
+                        self.__width, self.__height))
 
     def update(self, *args, **kwargs):
         """
@@ -132,6 +133,10 @@ class Rectangle(Base):
         """
         a method to make a dictionary
         """
-        self_dict = {"id": self.id, "width": self.__width,
-                    "height": self.__height, "x": self.__x, "y": self.__y}
+        self_dict = {
+                "id": self.id,
+                "width": self.__width,
+                "height": self.__height,
+                "x": self.__x,
+                "y": self.__y}
         return self_dict
