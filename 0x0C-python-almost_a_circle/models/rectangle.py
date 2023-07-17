@@ -20,22 +20,37 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """
+        getter for width
+        """
         return self.__width
 
     @property
     def height(self):
+        """
+        getter for height
+        """
         return self.__height
 
     @property
     def x(self):
+        """
+        getter for x
+        """
         return self.__x
 
     @property
     def y(self):
+        """
+        getter for y
+        """
         return self.__y
 
     @width.setter
     def width(self, value):
+        """
+        setter for width
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -44,6 +59,9 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """
+        setter for height
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -52,6 +70,9 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """
+        setter for x
+        """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -60,6 +81,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """
+        setter for y
+        """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -86,7 +110,8 @@ class Rectangle(Base):
         """
         returns a string that presents the rectangle
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -
+                {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """
@@ -101,6 +126,9 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        self_dict = {"id": self.id, "width": self.__width, "height": self.__height,
-                    "x": self.__x, "y": self.__y}
+        """
+        a method to make a dictionary
+        """
+        self_dict = {"id": self.id, "width": self.__width,
+                    "height": self.__height, "x": self.__x, "y": self.__y}
         return self_dict
