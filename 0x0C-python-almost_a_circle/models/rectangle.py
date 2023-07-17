@@ -14,12 +14,13 @@ class Rectangle(Base):
         """
         initizalize method
         """
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
+        super().__init__(id)
+    
     @property
     def width(self):
         """
@@ -112,8 +113,8 @@ class Rectangle(Base):
         """
         returns a string that presents the rectangle
         """
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -
-                {self.__width}/{self.__height}")
+        return
+        (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """
