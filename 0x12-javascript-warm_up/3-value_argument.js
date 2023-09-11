@@ -2,4 +2,8 @@
 
 const first = process.argv[2];
 
-console.log(first);
+if (first) {
+  console.log(first);
+} else {
+  console.log('No argument');
+}
