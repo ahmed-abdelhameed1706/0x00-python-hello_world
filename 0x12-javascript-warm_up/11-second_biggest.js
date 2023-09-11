@@ -6,7 +6,6 @@ const list = process.argv;
 if (length <= 3) {
   console.log(0);
 } else {
-  list.sort();
-  list.reverse();
-  console.log(list[1]);
+  list.sort().reverse();
+  console.log(parseInt(list[1]));
 }
