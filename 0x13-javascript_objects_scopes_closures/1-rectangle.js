@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Rectangle extends require('./0-rectangle'){
+class Rectangle {
   width;
   height;
   constructor (w, h) {
