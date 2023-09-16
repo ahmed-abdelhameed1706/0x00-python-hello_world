@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""
+Script to get states
+"""
 import MySQLdb
 import sys
-'''
-script to get states
-'''
+
 
 if __name__ == '__main__':
 
