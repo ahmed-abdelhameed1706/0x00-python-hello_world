@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""
+Script that takes in an argument and displays all values
+"""
 import MySQLdb
 import sys
-'''
-script to get states
-'''
+
 
 if __name__ == '__main__':
 
