@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+script that changes the name of a State object
+from the database hbtn_0e_6_usa
+"""
 from model_state import Base, State
 import sys
 from sqlalchemy import create_engine
@@ -10,13 +14,14 @@ if __name__ == "__main__":
     arg2 = sys.argv[2]
     arg3 = sys.argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(arg1, arg2, arg3), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        arg1, arg2, arg3), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    
+
     state = session.query(State).filter(State.id == 2).first()
 
     state.name = 'New Mexico'
