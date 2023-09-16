@@ -13,11 +13,13 @@ if __name__ == '__main__':
     arg3 = sys.argv[3]
     state_name = sys.argv[4]
 
-    conn = MySQLdb.connect(host="localhost", port=3306, user=arg1, passwd=arg2, db=arg3, charset="utf8")
+    conn = MySQLdb.connect(host="localhost", port=3306, user=arg1, passwd=arg2,
+                                db=arg3, charset="utf8")
 
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name like %s ORDER BY id ASC", (state_name + "%",))
+    cur.execute("""SELECT * FROM states
+                WHERE name like %s ORDER BY id ASC""", (state_name + "%",))
 
     query_rows = cur.fetchall()
     for row in query_rows:
