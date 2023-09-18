@@ -16,7 +16,8 @@ if __name__ == "__main__":
     arg2 = sys.argv[2]
     arg3 = sys.argv[3]
 
-    engine = create_engine(f'mysql+mysqldb://{arg1}:{arg2}@localhost:3306/{arg3}')
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        arg1, arg2, arg3))
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
