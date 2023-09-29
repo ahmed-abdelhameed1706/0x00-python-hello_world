@@ -13,4 +13,4 @@ if __name__ == "__main__":
 
     r_headers = requests.get(url).headers
 
-    print(r_headers['X-Request-Id'])
+    print(r_headers.get('X-Request-Id'))
