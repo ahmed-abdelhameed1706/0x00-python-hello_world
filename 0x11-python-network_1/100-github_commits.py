@@ -15,12 +15,16 @@ if __name__ == "__main__":
     url = f"https://api.github.com/repos/{owner}/{repo_name}/commits"
 
     
-    params = {"per_page": 10}
+    params = {
+            "per_page": 10,
+            "sort": "committer-date",
+            }
+
 
     r = requests.get(url, params=params)
 
     commits = r.json()
-
+    commits.reverse()
     for commit in commits:
         sha = commit['sha']
         author_name = commit['commit']['author']['name']
