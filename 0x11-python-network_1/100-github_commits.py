@@ -21,6 +21,6 @@ if __name__ == "__main__":
         for i in range(10):
             sha = commits[i].get("sha")
             author_name = commits[i].get('commit').get('author').get('name')
-            print(f"{sha} {author_name}")
+            print(f"{sha}: {author_name}")
     except IndexError:
         pass
