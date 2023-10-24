@@ -3,8 +3,6 @@ const request = require('request');
 
 const url = process.argv[2];
 
-const idToLookUp = 'https://swapi-api.alx-tools.com/api/people/18/';
-
 let count = 0;
 
 request(url, (error, response, body) => {
@@ -13,9 +11,12 @@ request(url, (error, response, body) => {
     const movies = data.results;
 
     for (const movie of movies) {
-      if (movie.characters.includes(idToLookUp)) {
-        count++;
-      }
+	    for (const character of movie.characters) {
+		    const id = character.split('/')[5]
+		    if (id === '18') {
+			    count++;
+		    }
+	    }
     }
     console.log(count);
   }
