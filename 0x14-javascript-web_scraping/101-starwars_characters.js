@@ -10,13 +10,23 @@ request(url, (error, response, body) => {
     const data = JSON.parse(body);
     const characters = data.characters;
 
-    for (const character of characters) {
-      request(character, (error, response, body) => {
-        if (!error && response.statusCode === 200) {
-          const data = JSON.parse(body);
-          console.log(data.name);
-        }
+    const getCharacter = async (character) => {
+      const characterData = await new Promise((resolve, reject) => {
+        request(character, (error, response, body) => {
+          if (!error && response.statusCode === 200) {
+            resolve(JSON.parse(body).name);
+          } else {
+            reject(error);
+          }
+        });
       });
-    }
+      console.log(characterData);
+    };
+
+    (async () => {
+      for (const character of characters) {
+        await getCharacter(character);
+      }
+    })();
   }
 });
