@@ -11,12 +11,12 @@ request(url, (error, response, body) => {
     const movies = data.results;
 
     for (const movie of movies) {
-	    for (const character of movie.characters) {
-		    const id = character.split('/')[5]
-		    if (id === '18') {
-			    count++;
-		    }
-	    }
+      for (const character of movie.characters) {
+        const id = character.split('/')[5];
+        if (id === '18') {
+          count++;
+        }
+      }
     }
     console.log(count);
   }
